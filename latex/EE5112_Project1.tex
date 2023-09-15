@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[hmargin=1in,vmargin=1in]{geometry}
+\usepackage{pythonhighlight}
+\linespread{1.5}
+
+\title{EE5112 Project1 Report Group7} 
+\author{Zhenbiao Huang A0285316B \\ Wu Fang \\ Mo Yifei}
+\date{14/9/2023} 
+
+
+\begin{document} 
+\maketitle
+\makeatother
+
+\tableofcontents
+
+\clearpage
+\section{Task 0. Recognize Facial Expressions}
+In this task, we built a linear logistic regression classification model, and used this model to predict the test set.
+Here are some key parts of the code. As requirement, we defined the Logistic Regression model with solver='sag':
+\begin{python}
+model = linear_model.LogisticRegression(solver='sag')
+model.fit(x, y)
+y_test_pred = model.predict(np.vstack(dfTest['pixels'].values))
+\end{python}
+After training finished, there will have a warning:
+\begin{python}
+ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+\end{python}
+This is because that 
+
+\end{document}
